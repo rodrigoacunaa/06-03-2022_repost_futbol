@@ -62,7 +62,7 @@
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="message">Codigo Postal</label> 
-                  <input type="text" id="cod_post_id" name="cod_post_name" class="form-control" placeholder="Su codigo postal" required="">
+                  <input type="number" id="cod_post_id" name="cod_post_name" class="form-control" placeholder="Su codigo postal" required="">
                 </div>
               </div>
 
@@ -118,13 +118,13 @@
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="message">Su Contraseña</label> 
-                  <input type="number" id="psw_id" name="clave_name" class="form-control" placeholder="Ingrese su Contraseña" required="">
+                  <input type="password" id="psw_id" name="clave_name" class="form-control" placeholder="Ingrese su Contraseña" required="">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" id="cargar_datos_name" value="Cargar Datos" class="btn btn-primary  py-2 px-4 rounded-0">
+                  <input type="submit" id="cargar_datos_name" value="Cargar Datos" class="btn btn-primary  py-2 px-4 rounded-0" name="submit_name">
                 </div>
               </div>
 

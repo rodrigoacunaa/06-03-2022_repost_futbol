@@ -17,11 +17,27 @@ include('../conection.php');
 			$valor_12= $_POST['nacionalidad_name'];
 			$valor_13= $_POST['fecha_nacimiento_name'];
 			$valor_14= $_POST['clave_name'];
+			$valor_tipo= 2;
 			
-			
+			if(isset($_POST['submit_name'])){
+
+				mysqli_query($conexion, "INSERT INTO `postulantes`(`nombre`, `apellido`, `edad`, `posicion`, `dni`, `cod_post`, `provincia`, `localidad`, `telefono`, `mail`, `club_post`, `nacionalidad`, `fecha_nacimiento`, `password`, `tipo`) VALUES ('".$valor_1."','".$valor_2."','".$valor_3."','".$valor_4."','".$valor_5."','".$valor_6."','".$valor_7."','".$valor_8."','".$valor_9."','".$valor_10."','".$valor_11."','".$valor_12."','".$valor_13."', '".$valor_14."', '".$valor_tipo."')");
+
+				echo "datos cargados correctamente";
+
 			
 
-			mysqli_query($conexion, "INSERT INTO `postulantes`(`nombre`, `apellido`, `edad`, `posicion`, `dni`, `cod_post`, `provincia`, `localidad`, `telefono`, `mail`, `club_post`, `nacionalidad`, `fecha_nacimiento`, `clave`) VALUES ('".$valor_1."','".$valor_2."','".$valor_3."','".$valor_4."','".$valor_5."','".$valor_6."','".$valor_7."','".$valor_8."','".$valor_9."','".$valor_10."','".$valor_11."','".$valor_12."','".$valor_13."', '".$valor_14."')");
+			 
+			
+
+
+
+			 } else{
+			 	echo "problemas con la carga de datos del formulario";
+			 }
+			
+
+			
 			
 		
 		?>

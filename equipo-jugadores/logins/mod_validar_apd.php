@@ -3,13 +3,13 @@
 include("../conection.php");
 
 $email=$_POST['email_name'];
-$codigo_unico=$_POST['unic_code_name'];
+$password=$_POST['password_name'];
 session_start();
 $SESSION['email_name']=$email;
 
 $conexion= conectame();
 
-$query="SELECT * FROM `apd` where `mail` ='$email' and `codigo_unico` ='$codigo_unico'";
+$query="SELECT * FROM `apd` where `mail` ='$email' and `password` ='$password'";
 
 $resultado=mysqli_query($conexion,$query);
 
@@ -18,10 +18,16 @@ $datos=mysqli_num_rows($resultado);
 
 if ($datos) {
 
-	$_SESSION['color'] = $color_apd;
+ $row = mysqli_fetch_assoc($resultado);
+
+ // $_SESSION['email_name'] = $row[''];
+
+ 	echo "sesion iniciada con exito";
 
 	header("location:../pages/index_apd.php");
-}else{
+}
+
+else{
 
 	?>
 	 <h1>ERROR AL INICIAR SESIÓN</h1>

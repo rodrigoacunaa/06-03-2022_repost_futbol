@@ -17,7 +17,7 @@ $datos=mysqli_num_rows($resultado);
 
 
 if ($datos) {
-	$_SESSION['color'] = $color_post;
+	// $_SESSION['color'] = $color_post;
 
 	header("location:../pages/index_post.php");
 }else{

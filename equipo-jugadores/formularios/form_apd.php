@@ -23,14 +23,7 @@
         <div class="row">
        
           <div class="col-md-12 col-lg-8 mb-5">
-            <form action="modulo_apd.php" class="p-5 bg-white border" method="post">
-
-              <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="fullname">Estado del Apadrinador</label>
-                  <input type="text" id="apadrinador_id" name="apadrinador_estado_name" class="form-control" placeholder="Su estado como APD" required="">
-                </div>
-              </div>
+            <form action="../modulos/modulo_apd.php" class="p-5 bg-white border" method="post">
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
@@ -97,7 +90,7 @@
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" id="cargar_datos_name" value="Cargar Datos" class="btn btn-primary  py-2 px-4 rounded-0">
+                  <input type="submit" id="cargar_datos_name" value="Cargar Datos" class="btn btn-primary  py-2 px-4 rounded-0" name="submit_name">
                 </div>
               </div>
 
